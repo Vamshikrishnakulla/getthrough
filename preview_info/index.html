@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- title getthrough for learning hub -->
+  <title>getthrough</title>
+  <link rel="icon" href="images/favicon.ico">
+  <!-- google font ubuntu -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&family=Ubuntu:wght@500&display=swap"
+    rel="stylesheet">
+  <!-- bootstrap links must be above the own css links -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- <link rel="stylesheet" href="D:/Desktop/WEB development/BASIC_HTML/bootstrap-install/bootstrap-5.3.0-alpha3-dist/css/bootstrap.css"> -->
+</head>
+
+<body>
+
+  <section id="title" class="colored-section">
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <a class="navbar-brand">Learning Hub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#democol"
+          aria-controls="democol" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="democol">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pricing">pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#features">about</a></li>
+            <li class="nav-item"><a class="nav-link" href="#footer">contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="">signup</a></li>
+            <li class="nav-item"><a class="nav-link" href="">login</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <!-- Title -->
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="bigger-heading">Find New and Updated materials.</h1>
+          <!-- using bootstrap class to define style with an external css will override the default property values set by bootstap.  -->
+          <button type="button" class="btn btn-dark btn-lg download-button">🍎Download</button>
+          <button type="button" class="btn btn-outline-light btn-lg download-button">▶️Download</button>
+        </div>
+        <div class="col-lg-6">
+          <!--we have given width and height here because we positioned the img to absolute by which it is now removed from the normal flow of the document. -->
+          <img class="title-image" src="images/bgimage.jpg" width="250px" height="500px" alt="iphone-mockup">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Features -->
+
+  <section id="features" class="white-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="feature-box col-lg-3">
+          <span class="icon">🎁</span>
+          <h3 class="features-title">Easy to use.</h3>
+          <p>So easy to use, weekly updated content.</p>
+        </div>
+        <div class="feature-box col-lg-3">
+          <span class="icon">⭕</span>
+          <h3 class="features-title">Notebooks</h3>
+          <p>We have all the notes,i.e,.. handwritten subject notes.</p>
+        </div>
+        <div class="feature-box col-lg-3">
+          <span class="icon">💖</span>
+          <h3 class="features-title">video playlists.</h3>
+          <p>video format playlist form youtube in your own language.</p>
+        </div>
+        <div class="feature-box col-lg-3">
+          <span class="icon">💖</span>
+          <h3 class="features-title">Website references.</h3>
+          <p>Get the best website suggested to study on a subject.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section id="testimonials" class="colored-section">
+    <!-- carousel slide show  -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active container-fluid">
+          <h2 class="testimonial-text">I am thanking the creator of the website Suprith reddy for making me to study and pass-out of the my semister exams easily. and i'am thanking the creator of the website GogiReddy, opps!!,...
+          </h2>
+          <img class="testimonial-image" src="images/suprithimage.jpg" alt="lady-profile">
+          <em>SuprithReddy, Nspt.</em>
+        </div>
+
+        <div class="carousel-item container-fluid">
+          <h2 class="testimonial-text">I have once gone through the website and it is amazing place to find all the resources. By studying from the resources avaliable here before the exam date, I have got through my semister 
+            exams with 90% of marks. I strongly suggest to go through the get through website, and i'am thanking the creator of the website Gochikonda, hurray!!,...
+          </h2>
+          <img src="images/baluimage1.jpg" alt="dog-profile">
+          <em>Balu Laxman, Warangal</em>
+        </div>
+
+        <div class="carousel-item container-fluid">
+          <h2 class="testimonial-text">It is a fantastic experience and here particularly, all the resources that are avaliable online are gathered and made as a platform to sudents
+            , all the resources are free without any fee. and i'am thanking the creator of the website adapa, Hooo!,..
+          </h2>
+          <img class="testimonial-image" src="images/gouthamimage1.jpg" alt="lady-profile">
+          <em>Adapa Goutham prasad, Bhupalpally</em>
+        </div>
+        <div class="carousel-item container-fluid">
+          <h2 class="testimonial-text">I'am form telugu medium background. so, for me it was very hard to grasp the topics of my semister, but the language option in the website made easy to understand the topics of my university syllabus. That's a cool feature, and i'am thanking the creator of the website sunarkani, yoo!,..
+          </h2>
+          <img class="testimonial-image" src="images/babuimage1.jpg" alt="lady-profile">
+          <em>Rajendra Babu, Buttaigudem.</em>
+        </div>
+        <div class="carousel-item container-fluid">
+          <h2 class="testimonial-text">feel free to get the chill out of using the website-getthrough, and i'am thanking the creator of the website Kulla, wow!!,..
+          </h2>
+          <img class="testimonial-image" src="images/vamshiimage.jpg" alt="lady-profile">
+          <em>Vamshi, Warangal.</em>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- <div class="row"> -->
+    <!-- <div class="col-lg-6"> -->
+
+
+    <!-- <div class="col-lg-6"> -->
+
+
+
+
+
+  </section>
+
+
+  <!-- Press -->
+
+  <section id="press" class="colored-section">
+    <img src="images/techcrunch.png" alt="tc-logo">
+    <img src="images/tnw.png" alt="tnw-logo">
+    <img src="images/bizinsider.png" alt="biz-insider-logo">
+    <img src="images/mashable.png" alt="mashable-logo">
+
+  </section>
+
+
+  <!-- Pricing -->
+
+  <section id="pricing" class="white-section">
+    <h2 class="section-heading">A Plan for university syllabus.</h2>
+    <p>Simple and affordable price plans for your near sem exams.</p>
+
+    <div class="row">
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-header">
+            <h3>chota</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">Free</h2>
+            <p>acces to 4 subjects</p>
+            <p>1 website reference.</p>
+            <p>1 youtube playlist.</p>
+            <p>Unlimited App Usage</p>
+            <div class="card-footer">
+              <div class="d-grid">
+                <button class="btn btn-lg btn-outline-dark" type="button">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card h-100">
+          <div class="card-header">
+            <h3>medium</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">$49 / mo</h2>
+            <p>access to 5 subjects</p>
+            <p>10 webites references</p>
+            <p>20 youtube playlists</p>
+            <p>Unlimited App Usage</p>
+            <div class="card-footer">
+              <div class="d-grid">
+                <button class="btn btn-lg btn-dark" type="button">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-4">
+        <div class="card h-100">
+          <div class="card-header">
+            <h3>Too-much</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">$99 / mo</h2>
+            <p>Pirority Listing</p>
+            <p>Unlimited websites</p>
+            <p>Unlimited playlists</p>
+            <p>Unlimited App Usage</p>
+            <div class="card-footer">
+              <div class="d-grid">
+                <button class="btn btn-lg btn-dark" type="button">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div style="text-align: center; padding-bottom: 20px;"> -->
+
+    <!-- </div> -->
+    <!-- <div class="row"> -->
+    <!-- <div class="col-lg-4 pricing-card"> -->
+
+
+    <!-- </div> -->
+    <!-- <div class="col-lg-4 pricing-card"> -->
+
+
+    <!-- </div> -->
+    <!-- <div class="col-lg-4 pricing-card"> -->
+
+
+    <!-- </div> -->
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <section id="cta" class="colored-section">
+    <div class="container-fluid">
+      <h3 class="bigger-heading">Tension Free on Semister Exams.</h3>
+      <button type="button" class="btn btn-lg btn-dark download-button">🍎Download</button>
+      <button type="button" class="btn btn-lg btn-dark download-button">▶️Download</button>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer id="footer" class="white-section">
+    <div class="container-fluid">
+      <div>▶️ 💻 📚 ⏭️</div>
+      <p>© Copyright getthrough</p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
