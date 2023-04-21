@@ -85,6 +85,7 @@ p {
     position: absolute;
     right: 25%;
     transform: rotate(25deg);
+    border: 2px solid;
     border-radius: 25px;
     /* padding-left: 10px; */
     
@@ -122,6 +123,11 @@ p {
     background-color: #f7697e;
 }
 
+.testimonials-heading {
+    padding: 10% 2% 0;
+    font-size: 3.2rem;
+}
+
 #testimonials img {
     border-radius: 100%;
     width: 20%;
@@ -142,7 +148,7 @@ p {
 
 #press img {
     width: 15%;
-    margin: 20px 20px 50px;
+    margin: 20px 10px 50px;
 }
 
 /* pricing section */
@@ -174,6 +180,11 @@ p {
  }
 
 @media (max-width: 1065px) {
+    /* navbar brand font setting */
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    
     /* headings  */
     .bigger-heading {
         font-size: 2.5rem;
@@ -181,7 +192,7 @@ p {
 
     /* title section  */
 
-    #title {
+    #title .container-fluid {
         text-align: center;
     }
 
@@ -191,9 +202,13 @@ p {
     }
 
     /* testmonials section  */
-
+    
+    .testimonials-heading {
+        font-size: 1.7rem;
+    }
+    
     .testimonial-text {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
     .section-heading, .price-text {
@@ -203,6 +218,7 @@ p {
     #testimonials img {
         width: 30%;
     }
+    
     /* pricing */
 
     #pricing {
