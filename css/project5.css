@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+.divsa {
+  /*width: 500px;*/
+  padding: 20px;
+}
+
+.box {
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
+
+.bgimage {
+  /*https://source.unsplash.com/1200x1200/?notes*/
+  
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+body {
+  font-family: "montserrat-black", Arial;
+  margin: 0;
+  /*background-color:hsl(119, 100%, 91%); remove*/
+  color: white;
+}
+
+.link0 {
+  background-color: cyan;
+  margin: 0px 0px 0px 0px;
+  border: 2px solid cyan;
+  border-radius: 20px;
+  font-size: 110%;
+}
+
+.field {
+  border-radius: 20px;
+  border: 3px outset #16FF00;
+  font-size: 1rem;
+}
+
+.field1 {
+  background-image: conic-gradient(#d9fa00 15%, #ffffb5);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 1;
+  border-radius: 20px;
+  border: 3px solid black;
+}
+
+.field2:hover {
+  background-color: #76ff00;
+}
+
+.pro:hover {
+  background-color: #00ec00;
+}
+
+legend {
+  color: black;
+  background-color: #eaec5c;
+  /* font-family: 'Sacramento', cursive; */
+  color: #e68739;
+}
+
+.but0 {
+  background-color: rgb(117, 238, 69);
+  border-radius: 20px;
+  color: black;
+  padding: 0;
+  font-size: 0.8rem;
+}
+
+#playlist1, #playlist2, #playlist3 {
+  padding: 5px;
+}
+
+.but:hover {
+  background-color: rgba(0, 255, 0, 0.3);
+}
+
+.but1:hover {
+  background-color: #00ec00;
+  color: red;
+}
+
+.but2 {
+  display: block;
+  background-color: rgb(139, 233, 183);
+  border-radius: 20px;
+  padding: 20px 0px;
+  color: #ff0000;
+  width: 200px;
+  margin: 20px auto;
+  font-family: Times, serif, "Times New Roman";
+  font-size: 80%;
+}
+
+.but2:hover {
+  background-color: #76ff00;
+  color: black;
+}
+
+@media screen and (max-width: 800px) {
+  .box {
+    float: none;
+    width: 100%;
+  }
+  .but {
+    background-color: rgba(0, 255, 0, 0.2);
+  }
+  .but:hover {
+    background-color: none;
+  }
+  .divsa {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

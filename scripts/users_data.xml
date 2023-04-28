@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user_details>
+  <user category="student">
+    <title lang="en">ram</title>
+    <addno>E19388</addno>
+    <branch>CSE</branch>
+    <year>3</year>
+    <sem>1</sem>
+    <college>cits</college>
+    <date>19-4-2023</date>
+  </user>
+  <user category="student">
+    <title lang="en">raman</title>
+    <addno>E19388</addno>
+    <branch>CSE</branch>
+    <year>3</year>
+    <sem>1</sem>
+    <college>cits</college>
+    <date>19-4-2023</date>
+  </user>
+  <user category="teacher">
+    <title lang="en">ramu</title>
+    <addno>E19388</addno>
+    <branch>CSE</branch>
+    <year>3</year>
+    <sem>1</sem>
+    <college>cits</college>
+    <date>19-4-2023</date>
+  </user>
+</user_details>
