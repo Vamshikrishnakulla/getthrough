@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearningHub</title>
+    <link rel="icon" href="images/favicon.ico">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-image: url("images/sub_categorybgimage3.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        hr {
+
+            border-style: none;
+            border-top-style: dotted;
+            border-color: grey;
+            border-width: 3px;
+            /*width: 5%;*/
+        }
+
+        #logo {
+            display: none;
+            color: white;
+            width: 100px;
+            margin: 0;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .logoitems {
+            display: none;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 3;
+        }
+
+        #navdisplay {
+            display: block;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+
+        }
+
+        li.ali {
+            float: left;
+        }
+
+        .right {
+            float: right;
+
+        }
+
+        .right li {
+            float: left;
+
+        }
+
+
+        input.search {
+
+            width: 100px;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+
+        }
+
+        a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 18px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: green;
+
+        }
+
+        div.bottom {
+            margin-top: 10px;
+            height: 100%;
+        }
+
+        @media only screen and (max-width: 900px) {
+
+            li.ali,
+            .right li,
+            .right {
+                float: none;
+
+            }
+
+            #navdisplay {
+                display: none;
+            }
+
+            #logo {
+                display: inline-block;
+            }
+
+            .logoitems {
+                display: block;
+                float: right;
+                margin: 10px 10px 0 0;
+                padding: 8px;
+                background-color: #383737;
+                border: 1px solid grey;
+                border-radius: 5px;
+            }
+
+            .logoitems:hover {
+                border: 2px solid rgb(223, 217, 217);
+
+            }
+
+            .logoitem {
+                display: block;
+                width: 15px;
+                height: 1px;
+                margin-top: 1px;
+                border: 1px solid rgb(148, 146, 146);
+            }
+
+            nav {
+
+                position: static;
+                height: auto;
+                width: 100%;
+                background-color: #333;
+                overflow: auto;
+
+            }
+
+            .dropdown {
+
+                display: block;
+
+            }
+
+            ul {
+                overflow: auto;
+            }
+
+            li a {
+                text-align: left;
+            }
+
+            input.search {
+                display: inline-block;
+                width: 70%;
+                margin: 10px 0 10px 10px;
+            }
+
+        }
+
+        .dropdown {
+
+            display: inline-block;
+
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 150px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 8px 16px 0 rgba(30, 3, 41, 0.2);
+            z-index: 2;
+
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 16px;
+            color: black;
+            text-align: left;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: inline;
+
+        }
+
+        .dropdown-content a:hover {
+            background: #f1f1f1;
+
+        }
+
+        div.holder {
+            width: 80%;
+            margin: auto;
+            padding: 40px 20px 0 20px;
+
+        }
+
+        div.responsive {
+            display: inline-block;
+            padding: 0 25px;
+            width: 49%;
+            margin-top: 15px;
+            position: relative;
+
+        }
+
+        .con:hover {
+            box-shadow: 0 8px 16px 0 #ec09a8, 0 10px 5px rgb(145, 123, 123);
+        }
+
+        .con {
+            display: block;
+            border-radius: 20px;
+            border: 2px solid rgb(240, 239, 239);
+            background-color: #fcfbf9;
+            box-shadow: 0 8px 16px 0 #eb36b4;
+
+        }
+
+        label {
+            display: inline-block;
+            padding: 40px 5px;
+            width: 85%;
+            font-family: 'Sacramento', cursive;
+            color: #66BFBF;
+            font-weight: 500;
+
+        }
+
+        input {
+
+            width: 25px;
+            height: 20px;
+
+        }
+
+        @media only screen and (max-width: 600px) {
+            div.holder {
+
+
+                padding: 0;
+
+            }
+
+            div.responsive {
+                display: block;
+                padding: 0;
+                width: 100%;
+                margin-top: 15px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <span id="logo"><a style="padding: 0;" href="category.html" target="_self"> <img src="images/logoimg.jpeg" style="width:120px; height:40px; margin:0px; border-radius:0px;"
+                alt="logo.jpeg"></span></a></span>
+        <button class="logoitems" onclick="changenav()" ondblclick="changenav2()">
+            <span class="logoitem"></span>
+            <span class="logoitem"></span>
+            <span class="logoitem"></span>
+        </button>
+        <ul id="navdisplay">
+            <li class="ali" style="padding: 5px;"><img src="images/logoimg.jpeg"
+                    style="width:120px; height:40px; margin:0px; border-radius:0px;" alt="logo.jpeg"></li>
+            <!-- <li class="ali"><a href="project1.php">LearningHub</a></li> -->
+            <li class="ali"><a href="category.html">Home</a></li>
+            <li class="ali"><a href="#">About</a></li>
+            <li class="ali dropdown">
+                <a href="#">Dropdown</a>
+                <div class="dropdown-content">
+                    <a href="#">B.tech I-I </a>
+                    <a href="#">B.tech I-II </a>
+                    <a href="#">B.tech II-I </a>
+                    <a href="#">B.tech II-II </a>
+                    <a href="#">B.tech ,.... etc,. </a>
+                </div>
+            </li>
+            <li class="ali"><a href="#">ContactUs</a></li>
+            <div class="right">
+
+                <li><input class="search" type="search" placeholder="Search Q&A..."></li>
+                <li class="searchbutton"><a href="#">Search</a></li>
+                <li><a href="#">SignUp</a></li>
+                <li><a href="#">Login</a></li>
+
+            </div>
+
+        </ul>
+
+    </nav>
+
+    <div class="holder">
+        <div class="responsive">
+            <div class="con dropdown">
+                <input type="radio" id="html1" name="fav_language" value="I-I SEM">
+                <label for="html1">I-I SEM</label>
+                <div class="dropdown-content" style="right: 0;">
+                    <a href="playlist.html">M-I</a>
+                    <a href="playlist.html">BEE</a>
+                    <a href="playlist.html">Drawing</a>
+                    <a href="playlist.html">ME</a>
+                    <a href="playlist.html">B.tech ,.... etc,. </a>
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="con dropdown">
+                <input type="radio" id="html2" name="fav_language" value="HTML">
+                <label for="html2">I-II SEM</label>
+                <div class="dropdown-content" style="right: 0;">
+                    <a href="playlist.html">M-I</a>
+                    <a href="playlist.html">BEE</a>
+                    <a href="playlist.html">Drawing</a>
+                    <a href="playlist.html">ME</a>
+                    <a href="playlist.html">B.tech ,.... etc,. </a>
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="con dropdown">
+                <input type="radio" id="html3" name="fav_language" value="HTML">
+                <label for="html3">II-I SEM</label>
+                <div class="dropdown-content" style="right: 0;">
+                    <a href="playlist.html">M-I</a>
+                    <a href="playlist.html">BEE</a>
+                    <a href="playlist.html">Drawing</a>
+                    <a href="playlist.html">ME</a>
+                    <a href="playlist.html">B.tech ,.... etc,. </a>
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="con dropdown">
+                <input type="radio" id="html4" name="fav_language" value="HTML">
+                <label for="html4">II-II SEM</label>
+                <div class="dropdown-content" style="right: 0;">
+                    <a href="playlist.html">M-I</a>
+                    <a href="playlist.html">BEE</a>
+                    <a href="playlist.html">Drawing</a>
+                    <a href="playlist.html">ME</a>
+                    <a href="playlist.html">B.tech ,.... etc,. </a>
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="con dropdown">
+                <input type="radio" id="html5" name="fav_language" value="HTML">
+                <label for="html5">III-I SEM</label>
+                <div class="dropdown-content" style="right: 0;">
+                    <a href="playlist.html">M-I</a>
+                    <a href="playlist.html">BEE</a>
+                    <a href="playlist.html">Drawing</a>
+                    <a href="playlist.html">ME</a>
+                    <a href="playlist.html">B.tech ,.... etc,. </a>
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="con dropdown">
+                <input type="radio" id="html6" name="fav_language" value="HTML">
+                <label for="html6">III-II SEM</label>
+                <div class="dropdown-content" style="right: 0;">
+                    <a href="playlist.html">M-I</a>
+                    <a href="playlist.html">BEE</a>
+                    <a href="playlist.html">Drawing</a>
+                    <a href="playlist.html">ME</a>
+                    <a href="playlist.html">B.tech ,.... etc,. </a>
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="con dropdown">
+                <input type="radio" id="html7" name="fav_language" value="HTML">
+                <label for="html7">IV-I SEM</label>
+                <div class="dropdown-content" style="bottom: 0; right: 0;">
+                    <a href="playlist.html">M-I</a>
+                    <a href="playlist.html">BEE</a>
+                    <a href="playlist.html">Drawing</a>
+                    <a href="playlist.html">ME</a>
+                    <a href="playlist.html">B.tech ,.... etc,. </a>
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="con dropdown">
+                <input type="radio" id="html8" name="fav_language" value="HTML">
+                <label for="html8">IV-II SEM</label>
+                <div class="dropdown-content" style="bottom: 0; right: 0;">
+                    <a href="playlist.html">M-I</a>
+                    <a href="playlist.html">BEE</a>
+                    <a href="playlist.html">Drawing</a>
+                    <a href="playlist.html">ME</a>
+                    <a href="playlist.html">B.tech ,.... etc,. </a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+    </div>
+    
+    <script>
+        //document.getElementById("navdisplay").style.display = "block";
+        function changenav() {
+
+            document.getElementById("logo").style.display = "none";
+            //document.getElementsByClassName("logoitems").display = none;
+            document.getElementById("navdisplay").style.display = "block";
+        }
+        function changenav2() {
+
+            document.getElementById("logo").style.display = "inline-block";
+            //document.getElementsByClassName("logoitems").display = none;
+            document.getElementById("navdisplay").style.display = "none";
+            window.location.reload();
+        }
+    </script>
+</body>
+
+</html>

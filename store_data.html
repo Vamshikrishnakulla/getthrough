@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Data stored</p>
+
+<script>
+
+const d = new Date();
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+    }
+};
+xhttp.open("GET", "scripts/users_data.xml", true);
+xhttp.send();
+
+function myFunction(xml) {
+    var xmlDoc = xml.responseXML;
+    var x, y, i, newUser, newTitle, newaddno, newbranch, newdate, newsem, newyear, newcollege, newaddnoText, newbranchText, newdateText, newsemText, newyearText, newcollegeText, newTitleText, txt;
+
+    // add a new user element
+    newUser = xmlDoc.createElement("user");
+
+    newTitle = xmlDoc.createElement("title");
+    newTitleText = xmlDoc.createTextNode("arjun");
+    newTitle.appendChild(newTitleText);
+    newUser.appendChild(newTitle);
+
+    newaddno = xmlDoc.createElement("addno");
+    newaddnoText = xmlDoc.createTextNode("E19398");
+    newaddno.appendChild(newaddnoText);
+    newUser.appendChild(newaddno);
+
+
+    newbranch = xmlDoc.createElement("branch");
+    newbranchText = xmlDoc.createTextNode("ECE");
+    newbranch.appendChild(newbranchText);
+    newUser.appendChild(newbranch);
+
+
+    newyear = xmlDoc.createElement("year");
+    newyearText = xmlDoc.createTextNode("2");
+    newyear.appendChild(newyearText);
+    newUser.appendChild(newyear);
+
+
+    newsem = xmlDoc.createElement("sem");
+    newsemText = xmlDoc.createTextNode("2");
+    newsem.appendChild(newsemText);
+    newUser.appendChild(newsem);
+
+
+    newcollege = xmlDoc.createElement("college");
+    newcollegeText = xmlDoc.createTextNode("CDU");
+    newcollege.appendChild(newcollegeText);
+    newUser.appendChild(newcollege);
+
+
+    newdate = xmlDoc.createElement("date");
+    newdateText = xmlDoc.createTextNode(d);
+    newdate.appendChild(newdateText);
+    newUser.appendChild(newdate);
+
+
+    x = xmlDoc.getElementsByTagName("user_details")[0];
+    x.appendChild(newUser);
+
+    // display all elements
+    //xlen = x.childNodes.length;
+    //y = x.firstChild;
+    //txt = "";
+    //for (i = 0; i < xlen; i++) {
+        //if (y.nodeType == 1) {
+            //txt += y.nodeName + "<br>";
+        //}
+    //y = y.nextSibling;
+    //}
+    //document.getElementById("demo").innerHTML = txt;
+    txt="";
+    x = xmlDoc.getElementsByTagName('title');
+    for (i = 0 ; i <x.length; i++) {
+        txt += x[i].childNodes[0].nodeValue + "<br>";
+    }
+    document.getElementById("demo").innerHTML = txt + d;
+}
+</script>
+
+</body>
+</html>

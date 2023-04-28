@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learning Hub</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&family=Ubuntu:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "montserrat-bold", Arial;
+            margin: 0;
+            /* https://source.unsplash.com/1550x800/?notes */
+            background-image: url('images/contactimage1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        .container {
+            padding: 40px 20% 0 20%;
+        }
+
+        .form-lable,
+        .form-control {
+            display: block;
+
+        }
+
+        .form-control:focus {
+            border: 3px solid green;
+            box-shadow: 2px 5px 8px 5px rgb(216, 210, 196);
+        }
+
+        .form-control {
+            width: 100%;
+            margin: 20px 0;
+            padding: 15px;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+
+        footer {
+
+            text-align: center;
+            padding: 18px;
+            background-color: #333;
+        }
+
+        .container button {
+            /*float: right;*/
+            margin: 10px 0;
+            padding: 7px 15px;
+            border: 2px solid grey;
+            background-color: aqua;
+            border-radius: 10px;
+        }
+
+        @media screen and (max-width: 700px) {
+            .container {
+
+                padding: 20px 20px 0 20px;
+                margin-bottom: 50px;
+            }
+
+            .container button {
+                padding: 5px 10px;
+            }
+
+            footer {
+                position: static;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <!-- <span id="logo">LearningHub</span> -->
+        <span id="logo"><img class="logoimg" src="images/logoimg.jpeg" alt="logo.jpeg"></span>
+        <button id="logo-div-open" class="logoitems" onclick="changenav('1')" aria-label="navbars">
+            <span class="logoitem"></span>
+            <span class="logoitem"></span>
+            <span class="logoitem"></span>
+        </button>
+
+
+
+        <button id="logo-div-close" class="logoitems" onclick="changenav('0')" aria-label="navbars">
+            <span class="logoitem"></span>
+            <span class="logoitem"></span>
+            <span class="logoitem"></span>
+        </button>
+
+        <ul id="navdisplay">
+            <li class="ali" style="padding: 5px; height: 50px;"><img src="images/logoimg.jpeg"
+                    style="width:120px; height:40px; margin:0px; border-radius:0px;" alt="logo.jpeg"></li>
+            <!-- <li class="ali"><a href="project1.php">LearningHub</a></li> -->
+            <li class="ali"><a href="category.html">Home</a></li>
+            <li class="ali"><a href="about.html">About</a></li>
+            <li class="ali dropdown">
+                <a href="#">Subjects</a>
+                <div class="dropdown-content">
+                    <a href="sub_category_transparent.html">B.tech I-I </a>
+                    <a href="sub_category_transparent.html">B.tech I-II </a>
+                    <a href="sub_category_transparent.html">B.tech II-I </a>
+                    <a href="sub_category_transparent.html">B.tech II-II </a>
+                    <a href="sub_category_transparent.html">B.tech ,.... etc,. </a>
+                </div>
+            </li>
+            <li class="ali"><a href="contact.html">ContactUs</a></li>
+            <div class="right">
+
+                <li><input type="search" placeholder="Search Q&A..."></li>
+                <li class="searchbutton"><a href="#">Search</a></li>
+                <li><a href="signup.html">SignUp</a></li>
+                <li><a href="login.html">Login</a></li>
+
+            </div>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <h1 style="text-align: center;">Please, enter your details here.</h1>
+        <h1 class="text-center">SignUp Form : </h1>
+        <div class="mb-3">
+            <label for="contact" class="form-label" reqired>Name :</label>
+            <input type="text" class="form-control" name="Name" id="contact"
+                onfocusout="window.localStorage.setItem('name', value);">
+        </div>
+        <div class="mb-3">
+            <label for="add" class="form-label" reqired>Admission No :</label>
+            <input type="text" class="form-control" name="add" id="add"
+                onfocusout="localStorage.setItem('addno', value);">
+        </div>
+        <div class="mb-3">
+            <label for="contact_email" class="form-label" reqired>Email address</label>
+            <input type="email" class="form-control" name="Email" id="contact_email" placeholder="name@example.com"
+                onfocusout="localStorage.setItem('email', value);">
+        </div>
+        <div class="mb-3">
+            <label for="text_area" class="form-label" required>password : </label>
+            <input type="password" class="form-control" name="pass" id="text_area"
+                onfocusout="localStorage.setItem('key', value);">
+        </div>
+        <button onclick="checkdata()">Submit</button>
+    </div>
+
+    <br>
+    <footer>
+        <span>&#169;Getthrough.com</span>
+        <span>▶️Projectbeclearedlearninghub@gmail.com</span>
+        <span>📚facebook.com</span>
+        <div style="font-size: 0.5rem; color: #333;">creators: Gogireddy Suprith Reddy, Adapa Goutham Prasad, Gochikonda Balulaxman, Sunarkani Rajendra Babu, Kulla Vamshi Krishna. </div>
+    </footer>
+    <script>
+        function changenav(val) {
+            if (val == 1) {
+                document.getElementById("logo").style.display = "none";
+                document.getElementById("logo-div-open").style.display = "none";
+                document.getElementById("logo-div-close").style.display = "block";
+                document.getElementById("logo-div-close").style.border = "2px solid rgb(209, 204, 204)";
+                document.getElementById("navdisplay").style.display = "block";
+
+            }
+            if (val == 0) {
+                document.getElementById("logo").style.display = "inline-block";
+                document.getElementById("logo-div-close").style.display = "none";
+                document.getElementById("logo-div-open").style.display = "block";
+                document.getElementById("navdisplay").style.display = "none";
+                // important for responsiveness of a website's header.
+                // window.location.reload();
+            }
+        }
+        function checkdata() {
+            if (localStorage.getItem("name") && localStorage.getItem("addno") && localStorage.getItem("email") && localStorage.getItem("key")) {
+                alert('Registered/{already} sucessfully.Please Login now.');
+                window.location.assign("login.html");
+                //window.location.reload();
+            }
+            else {
+                alert('Please, Fill all the required feilds.');
+            }
+        }
+    </script>
+
+    <!-- xml file manuplation  -->
+    <script>
+
+        const d = new Date();
+        
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                myFunction(this);
+            }
+        };
+        xhttp.open("GET", "scripts/users_data.xml", true);
+        xhttp.send();
+        
+        function myFunction(xml) {
+            var xmlDoc = xml.responseXML;
+            var x, y, i, newUser, newTitle, newaddno, newbranch, newdate, newsem, newyear, newcollege, newaddnoText, newbranchText, newdateText, newsemText, newyearText, newcollegeText, newTitleText, txt;
+        
+            // add a new user element
+            newUser = xmlDoc.createElement("user");
+        
+            newTitle = xmlDoc.createElement("title");
+            newTitleText = xmlDoc.createTextNode(localStorage.getItem("name"));
+            newTitle.appendChild(newTitleText);
+            newUser.appendChild(newTitle);
+        
+            newaddno = xmlDoc.createElement("addno");
+            newaddnoText = xmlDoc.createTextNode(localStorage.getItem("addno"));
+            newaddno.appendChild(newaddnoText);
+            newUser.appendChild(newaddno);
+        
+        
+            newbranch = xmlDoc.createElement("branch");
+            newbranchText = xmlDoc.createTextNode("ECE");
+            newbranch.appendChild(newbranchText);
+            newUser.appendChild(newbranch);
+        
+        
+            newyear = xmlDoc.createElement("year");
+            newyearText = xmlDoc.createTextNode("2");
+            newyear.appendChild(newyearText);
+            newUser.appendChild(newyear);
+        
+        
+            newsem = xmlDoc.createElement("sem");
+            newsemText = xmlDoc.createTextNode("2");
+            newsem.appendChild(newsemText);
+            newUser.appendChild(newsem);
+        
+        
+            newcollege = xmlDoc.createElement("college");
+            newcollegeText = xmlDoc.createTextNode("CDU");
+            newcollege.appendChild(newcollegeText);
+            newUser.appendChild(newcollege);
+        
+        
+            newdate = xmlDoc.createElement("date");
+            newdateText = xmlDoc.createTextNode(d);
+            newdate.appendChild(newdateText);
+            newUser.appendChild(newdate);
+        
+        
+            x = xmlDoc.getElementsByTagName("user_details")[0];
+            x.appendChild(newUser);
+        
+            // display all elements
+            //xlen = x.childNodes.length;
+            //y = x.firstChild;
+            //txt = "";
+            //for (i = 0; i < xlen; i++) {
+                //if (y.nodeType == 1) {
+                    //txt += y.nodeName + "<br>";
+                //}
+            //y = y.nextSibling;
+            //}
+            //document.getElementById("demo").innerHTML = txt;
+            // x = xmlDoc.getElementsByTagName('title');
+            // for (i = 0 ; i <x.length; i++) {
+            //     txt += x[i].childNodes[0].nodeValue + "<br>";
+            // }
+            // document.getElementById("demo").innerHTML = txt + d;
+        }
+        </script>
+</body>
+
+</html>
