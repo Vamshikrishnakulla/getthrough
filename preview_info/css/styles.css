@@ -31,6 +31,17 @@ p {
     padding: 7% 15%;
 }
 
+/* button links style's */
+button a:link {
+    text-decoration: none;
+    color: black;
+}
+
+button a:visited {
+    text-decoration: none;
+    color: black;
+}
+
 /* coloured sections  */
 
 .colored-section {
